@@ -1,0 +1,224 @@
+mysql> create table Restaurants(RestaurantID int Auto_Increment primary key,RestaurantName varchar(20),RestaurantAddress varchar(20),RestaurantCity varchar(20),ContactNo bigint);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into restaurants values(10,"Madhuram","Maharaja Nagar","Tvl",7708980372),(11,"Choco Room","Jeyanthipuram","Kovai",9674351524),(12,"Janakiram","Tvs Nagar","Ooty",9952129199),(13,"Kamalia","Virudhu Nagar","Sivakasi",7496848615),(14,"Bharani","Porur","Chennai",9426759584),(15,"Saravana","Palayamkottai","Tvl",9923429199);
+Query OK, 6 rows affected (0.01 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql> create table RMenuItems(MenuId int Auto_Increment Primary key,RestaurantID int,foreign key(restaurantID) references Restaurants(RestaurantID),MenuName varchar(20),MenuType varchar(20),MenuCategory varchar(20),MenuPrice int,MenuDesc varchar(20)) values(1,10,"Veg","Dessert","Dinner",90,"Vanilla Milkshake"),(2,10,"Non-Veg","Gravy","Lunch",180,"Butter Chicken"),(3,11,"Non-Veg","Roti","Dinner",100,"Parotta"),(4,11,"Veg","Fry","Snacks",90,"Gobi 65"),(5,12,"Veg","Dosa","Breakfast",60,"Onion Uthappam"),(6,13,"Non-Veg","Rice","Lunch",150,"Egg Fried Rice"),(7,13,"Veg","Dessert","Dinner",30,"Gulab Jamun"),
+    -> (8,14,"Non-Veg","Noodles","Lunch",120,"Chicken Noodles"),(9,15,"Veg","Starters","Snacks",50,"Babycorn 65"),(10,15,"Veg","Dosa","Breakfast",75,"Special Dosa");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(1,10,"Veg","Dessert","Dinner",90,"Vanilla Milkshake"),(2,10,"Non-Veg","Gravy","' at line 1
+mysql> create table RMenuItems(MenuId int Auto_Increment Primary key,RestaurantID int,foreign key(restaurantID) references Restaurants(RestaurantID),MenuName varchar(20),MenuType varchar(20),MenuCategory varchar(20),MenuPrice int,MenuDesc varchar(20));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into RMenuItems values(1,10,"Veg","Dessert","Dinner",90,"Vanilla Milkshake"),(2,10,"Non-Veg","Gravy","Lunch",180,"Butter Chicken"),(3,11,"Non-Veg","Roti","Dinner",100,"Parotta"),(4,11,"Veg","Fry","Snacks",90,"Gobi 65"),(5,12,"Veg","Dosa","Breakfast",60,"Onion Uthappam"),(6,13,"Non-Veg","Rice","Lunch",150,"Egg Fried Rice"),(7,13,"Veg","Dessert","Dinner",30,"Gulab Jamun"),
+    -> (8,14,"Non-Veg","Noodles","Lunch",120,"Chicken Noodles"),(9,15,"Veg","Starters","Snacks",50,"Babycorn 65"),(10,15,"Veg","Dosa","Breakfast",75,"Special Dosa");
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> create table Customers(CustomerID varchar(20) Primary key,CustomerName varchar(20),CustomerCity varchar(10),CustomerGender varchar(1) check (CustomerGender in ('F','M','T')),CustomerPassword varchar(50));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into customers values("dhanam@gmail.com","Dhanam","Tvl",'F',MD5("Dhanam")),("riya@gmail.com","Riya","Ngl",'F',MD5("Riya")),("jk@gmail.com","JK","Svk",'M',MD5("JK")),("diya@gmail.com","Diya","Ooty",'F',MD5("Diya")),("tintu@gmail.com","Tintu","Kovai",'F',MD5("Tintu"));
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> create table Orders(OrderID int Auto_Increment Primary key,CustomerID varchar(20),foreign key(CustomerID) references Customers(CustomerID),OrderDate date,DeliveryAddress varchar(50),OrderStatus varchar(20) check(orderstatus in ("Delivered","Cancelled")));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into orders values(101,"dhanam@gmail.com",'2021-05-09',"Kumaresan Nagar Tvl","Delivered"),(102,"diya@gmail.com",'2021-05-09',"Tvs Nagar Tvl","Cancelled"),(103,"jk@gmail.com",'2021-04-09',"Thirumal Nagar Ooty","Delivered"),(104,"riya@gmail.com",'2021-04-09',"Porur Chennai","Delivered"),(105,"tintu@gmail.com",'2021-01-09',"Gindy","Cancelled");
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> create table OrderMenus(OrderID int,foreign key(OrderID) references Orders(OrderID),MenuID int ,foreign key(MenuID) references RMenuItems(MenuID),MenuQty int,MenuPrice int);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into OrderMenus values(101,2,1,180),(102,1,2,180),(104,10,1,75),(103,6,1,150),(105,6,1,150);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from Restaurants;
++--------------+----------------+-------------------+----------------+------------+
+| RestaurantID | RestaurantName | RestaurantAddress | RestaurantCity | ContactNo  |
++--------------+----------------+-------------------+----------------+------------+
+|           10 | Madhuram       | Maharaja Nagar    | Tvl            | 7708980372 |
+|           11 | Choco Room     | Jeyanthipuram     | Kovai          | 9674351524 |
+|           12 | Janakiram      | Tvs Nagar         | Ooty           | 9952129199 |
+|           13 | Kamalia        | Virudhu Nagar     | Sivakasi       | 7496848615 |
+|           14 | Bharani        | Porur             | Chennai        | 9426759584 |
+|           15 | Saravana       | Palayamkottai     | Tvl            | 9923429199 |
++--------------+----------------+-------------------+----------------+------------+
+6 rows in set (0.02 sec)
+
+mysql> select * from RMenuItems;
++--------+--------------+----------+----------+--------------+-----------+-------------------+
+| MenuId | RestaurantID | MenuName | MenuType | MenuCategory | MenuPrice | MenuDesc          |
++--------+--------------+----------+----------+--------------+-----------+-------------------+
+|      1 |           10 | Veg      | Dessert  | Dinner       |        90 | Vanilla Milkshake |
+|      2 |           10 | Non-Veg  | Gravy    | Lunch        |       180 | Butter Chicken    |
+|      3 |           11 | Non-Veg  | Roti     | Dinner       |       100 | Parotta           |
+|      4 |           11 | Veg      | Fry      | Snacks       |        90 | Gobi 65           |
+|      5 |           12 | Veg      | Dosa     | Breakfast    |        60 | Onion Uthappam    |
+|      6 |           13 | Non-Veg  | Rice     | Lunch        |       150 | Egg Fried Rice    |
+|      7 |           13 | Veg      | Dessert  | Dinner       |        30 | Gulab Jamun       |
+|      8 |           14 | Non-Veg  | Noodles  | Lunch        |       120 | Chicken Noodles   |
+|      9 |           15 | Veg      | Starters | Snacks       |        50 | Babycorn 65       |
+|     10 |           15 | Veg      | Dosa     | Breakfast    |        75 | Special Dosa      |
++--------+--------------+----------+----------+--------------+-----------+-------------------+
+10 rows in set (0.01 sec)
+
+mysql> select * from Customers;
++------------------+--------------+--------------+----------------+----------------------------------+
+| CustomerID       | CustomerName | CustomerCity | CustomerGender | CustomerPassword                 |
++------------------+--------------+--------------+----------------+----------------------------------+
+| dhanam@gmail.com | Dhanam       | Tvl          | F              | e7c80a8e2bf38174012a9aa69e18d41a |
+| diya@gmail.com   | Diya         | Ooty         | F              | 98e0c7edbf3853a9b77269e02182f0df |
+| jk@gmail.com     | JK           | Svk          | M              | 5c3116796f5ff62adaf85580801f3fa4 |
+| riya@gmail.com   | Riya         | Ngl          | F              | 79a2e96423130317954dd654e226dbcc |
+| tintu@gmail.com  | Tintu        | Kovai        | F              | c7aae06d337a341c214bd0ca435095f3 |
++------------------+--------------+--------------+----------------+----------------------------------+
+5 rows in set (0.01 sec)
+
+mysql> select * from  Orders;
++---------+------------------+------------+---------------------+-------------+
+| OrderID | CustomerID       | OrderDate  | DeliveryAddress     | OrderStatus |
++---------+------------------+------------+---------------------+-------------+
+|     101 | dhanam@gmail.com | 2021-05-09 | Kumaresan Nagar Tvl | Delivered   |
+|     102 | diya@gmail.com   | 2021-05-09 | Tvs Nagar Tvl       | Cancelled   |
+|     103 | jk@gmail.com     | 2021-04-09 | Thirumal Nagar Ooty | Delivered   |
+|     104 | riya@gmail.com   | 2021-04-09 | Porur Chennai       | Delivered   |
+|     105 | tintu@gmail.com  | 2021-01-09 | Gindy               | Cancelled   |
++---------+------------------+------------+---------------------+-------------+
+5 rows in set (0.01 sec)
+
+mysql> select * from OrderMenus;
++---------+--------+---------+-----------+
+| OrderID | MenuID | MenuQty | MenuPrice |
++---------+--------+---------+-----------+
+|     101 |      2 |       1 |       180 |
+|     102 |      1 |       2 |       180 |
+|     104 |     10 |       1 |        75 |
+|     103 |      6 |       1 |       150 |
+|     105 |      6 |       1 |       150 |
++---------+--------+---------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Restaurants where RestaurantCity="Tvl";
++--------------+----------------+-------------------+----------------+------------+
+| RestaurantID | RestaurantName | RestaurantAddress | RestaurantCity | ContactNo  |
++--------------+----------------+-------------------+----------------+------------+
+|           10 | Madhuram       | Maharaja Nagar    | Tvl            | 7708980372 |
+|           15 | Saravana       | Palayamkottai     | Tvl            | 9923429199 |
++--------------+----------------+-------------------+----------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> select a.RestaurantID,a.RestaurantName,b.MenuID,b.MenuName,b.MenuPrice from Restaurants a,RMenuItems b where a.RestaurantID=b.RestaurantID;
++--------------+----------------+--------+----------+-----------+
+| RestaurantID | RestaurantName | MenuID | MenuName | MenuPrice |
++--------------+----------------+--------+----------+-----------+
+|           10 | Madhuram       |      1 | Veg      |        90 |
+|           10 | Madhuram       |      2 | Non-Veg  |       180 |
+|           11 | Choco Room     |      3 | Non-Veg  |       100 |
+|           11 | Choco Room     |      4 | Veg      |        90 |
+|           12 | Janakiram      |      5 | Veg      |        60 |
+|           13 | Kamalia        |      6 | Non-Veg  |       150 |
+|           13 | Kamalia        |      7 | Veg      |        30 |
+|           14 | Bharani        |      8 | Non-Veg  |       120 |
+|           15 | Saravana       |      9 | Veg      |        50 |
+|           15 | Saravana       |     10 | Veg      |        75 |
++--------------+----------------+--------+----------+-----------+
+10 rows in set (0.00 sec)
+
+mysql> select a.RestaurantID,a.RestaurantName,b.MenuID,b.MenuName,b.MenuPrice from Restaurants a,RMenuItems b where a.RestaurantID=b.RestaurantID and RestaurantCity="Chennai";
++--------------+----------------+--------+----------+-----------+
+| RestaurantID | RestaurantName | MenuID | MenuName | MenuPrice |
++--------------+----------------+--------+----------+-----------+
+|           14 | Bharani        |      8 | Non-Veg  |       120 |
++--------------+----------------+--------+----------+-----------+
+1 row in set (0.00 sec)
+
+mysql>
+mysql> select a.CustomerName,a.CustomerID,a.CustomerCity,b.OrderID,b.OrderDate,b.OrderStatus,c.MenuQty,c.MenuPrice from Customers a,Orders b,OrderMenus c where a.CustomerID=b.CustomerID and b.OrderID=c.OrderID and CustomerName="Dhanam";
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+| CustomerName | CustomerID       | CustomerCity | OrderID | OrderDate  | OrderStatus | MenuQty | MenuPrice |
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+| Dhanam       | dhanam@gmail.com | Tvl          |     101 | 2021-05-09 | Delivered   |       1 |       180 |
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+1 row in set (0.00 sec)
+
+mysql> select a.CustomerName,a.CustomerID,b.OrderDate,b.OrderStatus,c.MenuQty,c.MenuPrice,d1.RestaurantName,d.MenuName,d.MenuType,d.MenuCategory,d.MenuDesc from Customers a,Orders b,OrderMenus c ,RMenuItems d,Restaurants d1 where a.CustomerID=b.CustomerID and b.OrderID=c.OrderID and c.MenuId=d.MenuID and d1.RestaurantID=d.RestaurantID and CustomerName="Dhanam";
++--------------+------------------+------------+-------------+---------+-----------+----------------+----------+----------+--------------+----------------+
+| CustomerName | CustomerID       | OrderDate  | OrderStatus | MenuQty | MenuPrice | RestaurantName | MenuName | MenuType | MenuCategory | MenuDesc       |
++--------------+------------------+------------+-------------+---------+-----------+----------------+----------+----------+--------------+----------------+
+| Dhanam       | dhanam@gmail.com | 2021-05-09 | Delivered   |       1 |       180 | Madhuram       | Non-Veg  | Gravy    | Lunch        | Butter Chicken |
++--------------+------------------+------------+-------------+---------+-----------+----------------+----------+----------+--------------+----------------+
+1 row in set (0.00 sec)
+
+mysql> select a.CustomerName,a.CustomerID,a.CustomerCity,b.OrderID,b.OrderDate,b.OrderStatus,c.MenuQty,c.MenuPrice from Customers a,Orders b,OrderMenus c where a.CustomerID=b.CustomerID and b.OrderID=c.OrderID and CustomerName="Dhanam" order by OrderDate desc limit 5;
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+| CustomerName | CustomerID       | CustomerCity | OrderID | OrderDate  | OrderStatus | MenuQty | MenuPrice |
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+| Dhanam       | dhanam@gmail.com | Tvl          |     101 | 2021-05-09 | Delivered   |       1 |       180 |
++--------------+------------------+--------------+---------+------------+-------------+---------+-----------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

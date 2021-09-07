@@ -1,0 +1,252 @@
+
+
+
+
+mysql> desc CustomersInfo;
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| CustomerID       | int         | NO   | PRI | NULL    |       |
+| CustomerName     | varchar(20) | YES  |     | NULL    |       |
+| CustomerCity     | varchar(20) | YES  |     | NULL    |       |
+| CustomerAddress  | varchar(40) | YES  |     | NULL    |       |
+| CustomerMobileNo | bigint      | YES  | UNI | NULL    |       |
+| PAN              | bigint      | YES  | UNI | NULL    |       |
+| CustomerPassword | varchar(20) | YES  |     | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+7 rows in set (0.02 sec)
+mysql> insert into CustomersInfo values(99,'Kaaviya','Dharmapuri','2/9,ABC nagar',784596123,12453687,'kaavi@123');
+Query OK, 1 row affected (0.02 sec)
+
+mysql> insert into CustomersInfo values(98,'Harshini','Tirupur','6/7,Don nagar',9442315497,3442615,'harshini@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(97,'Jaya','Avinasi','6/7,Bus nagar',9865753957,86575395,'jaya@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(96,'DD','Karur','1/11,Best nagar',824833532,2356489,'dd@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(95,'Deepss','Erode','12/11,Waste street',912356489,2356201,'dp@123');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into CustomersInfo values(94,'arthi','Coimbatore','12/03,jolly street',251436748,2514367,'arthi@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(93,'priya','Theni','11/98,London street',8123450200,10720030,'priya@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(92,'Mala','ooty','11/90,star street',9060305020,9060305,'mala@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(91,'Kamalini','Coimbatore','0/23,paris street',8489575415,84895754,'kama@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CustomersInfo values(90,'Harshee','Madurai','1/23,cross street',8508265406,85082654,'harsh@123');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from CustomersInfo;
++------------+--------------+--------------+---------------------+------------------+----------+------------------+
+| CustomerID | CustomerName | CustomerCity | CustomerAddress     | CustomerMobileNo | PAN      | CustomerPassword |
++------------+--------------+--------------+---------------------+------------------+----------+------------------+
+|         90 | Harshee      | Madurai      | 1/23,cross street   |       8508265406 | 85082654 | harsh@123        |
+|         91 | Kamalini     | Coimbatore   | 0/23,paris street   |       8489575415 | 84895754 | kama@123         |
+|         92 | Mala         | ooty         | 11/90,star street   |       9060305020 |  9060305 | mala@123         |
+|         93 | priya        | Theni        | 11/98,London street |       8123450200 | 10720030 | priya@123        |
+|         94 | arthi        | Coimbatore   | 12/03,jolly street  |        251436748 |  2514367 | arthi@123        |
+|         95 | Deepss       | Erode        | 12/11,Waste street  |        912356489 |  2356201 | dp@123           |
+|         96 | DD           | Karur        | 1/11,Best nagar     |        824833532 |  2356489 | dd@123           |
+|         97 | Jaya         | Avinasi      | 6/7,Bus nagar       |       9865753957 | 86575395 | jaya@123         |
+|         98 | Harshini     | Tirupur      | 6/7,Don nagar       |       9442315497 |  3442615 | harshini@123     |
+|         99 | Kaaviya      | Dharmapuri   | 2/9,ABC nagar       |        784596123 | 12453687 | kaavi@123        |
++------------+--------------+--------------+---------------------+------------------+----------+------------------+
+10 rows in set (0.00 sec)
+
+
+mysql> desc AccountInfo;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| AccountID       | int         | NO   | PRI | NULL    |       |
+| CustomerID      | int         | YES  | MUL | NULL    |       |
+| AccountType     | varchar(30) | YES  |     | NULL    |       |
+| AccountBalance  | int         | YES  |     | NULL    |       |
+| AccountOpenDate | date        | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+mysql> insert into AccountInfo values(123456780,99,"Salary Account",20000,'2021-01-09');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AccountInfo values(123456781,101,"Savings Account",15000,'2021-01-09');
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`bank`.`accountinfo`, CONSTRAINT `accountinfo_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customersinfo` (`CustomerID`))
+mysql> insert into AccountInfo values(123456781,98,"Savings Account",15000,'2021-01-09');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AccountInfo values(123456782,97,"Current Account",25000,'2021-01-09');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into AccountInfo values(123456783,96,"Salary Account",50000,'2020-05-10'),(123456784,95,"Savings Account",40000,'2019-01-12');
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> insert into AccountInfo values(123456785,94,"Salary Account",20000,'2020-05-12'),(123456786,93,"Current Account",10000,'2020-05-12'),(123456787,107,"Salary Account",30000,'2018-03-20',"Open");
+ERROR 1136 (21S01): Column count doesn't match value count at row 3
+mysql> insert into AccountInfo values(123456788,108,"Savings Account",30000,'2021-03-20',"Open");
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into AccountInfo values(123456785,94,"Salary Account",20000,'2020-05-12'),(123456786,93,"Current Account",10000,'2020-05-12'),(123456787,92,"Salary Account",30000,'2018-03-20'),(123456788,91,"Savings Account",30000,'2021-03-20'),(123456789,90,"Current Account",35000,'2021-08-22');
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select * from AccountInfo;
++-----------+------------+-----------------+----------------+-----------------+
+| AccountID | CustomerID | AccountType     | AccountBalance | AccountOpenDate |
++-----------+------------+-----------------+----------------+-----------------+
+| 123456780 |         99 | Salary Account  |          20000 | 2021-01-09      |
+| 123456781 |         98 | Savings Account |          15000 | 2021-01-09      |
+| 123456782 |         97 | Current Account |          25000 | 2021-01-09      |
+| 123456783 |         96 | Salary Account  |          50000 | 2020-05-10      |
+| 123456784 |         95 | Savings Account |          40000 | 2019-01-12      |
+| 123456785 |         94 | Salary Account  |          20000 | 2020-05-12      |
+| 123456786 |         93 | Current Account |          10000 | 2020-05-12      |
+| 123456787 |         92 | Salary Account  |          30000 | 2018-03-20      |
+| 123456788 |         91 | Savings Account |          30000 | 2021-03-20      |
+| 123456789 |         90 | Current Account |          35000 | 2021-08-22      |
++-----------+------------+-----------------+----------------+-----------------+
+10 rows in set (0.00 sec)
+
+
+mysql>create table TransactionInfo(TransactionID int Primary Key,AccountID int,Foreign Key(AccountID) references AccountInfo(AccountID),TransactionType varchar(20) default 'Not defined' , Amount double check(Amount>0),TransactionDate date);
+
+mysql> desc TransactionInfo;
++-----------------+-------------+------+-----+-------------+-------+
+| Field           | Type        | Null | Key | Default     | Extra |
++-----------------+-------------+------+-----+-------------+-------+
+| TransactionID   | int         | NO   | PRI | NULL        |       |
+| AccountID       | int         | YES  | MUL | NULL        |       |
+| TransactionType | varchar(20) | YES  |     | Not defined |       |
+| Amount          | double      | YES  |     | NULL        |       |
+| TransactionDate | date        | YES  |     | NULL        |       |
++-----------------+-------------+------+-----+-------------+-------+
+5 rows in set (0.01 sec)
+
+
+mysql> insert into TransactionInfo values(0,123456780,"Debit",2000,'2021-05-09'),(2,123456782,"Credit",1000,'2021-05-09'),(3,123456783,"Credit",1550,'2021-05-22'),(4,123456784,"Debit",800,'2021-01-09'),(5,123456785,"Debit",1010,'2021-01-20'),(6,123456786,"Credit",1015,'2021-08-20'),(7,123456787,"Debit",10000,'2021-08-20'),(8,123456788,"Credit",1000,'2021-08-20'),(9,123456789,"Debit",12000,'2021-08-20'),(10,123456789,"Credit",22000,'2021-10-20'),(11,123456789,"Debit",2500,'2021-11-20'),(12,123456783,"Credit",1550,'2021-05-30'),(13,123456787,"Credit",1550,'2021-05-30'),(14,123456781,"Credit",25000,'2021-11-20'),(15,123456783,"Debit",1550,'2021-05-22');
+Query OK, 15 rows affected (0.01 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+mysql> select * from TransactionInfo;
++---------------+-----------+-----------------+--------+-----------------+
+| TransactionID | AccountID | TransactionType | Amount | TransactionDate |
++---------------+-----------+-----------------+--------+-----------------+
+|             0 | 123456780 | Debit           |   2000 | 2021-05-09      |
+|             2 | 123456782 | Credit          |   1000 | 2021-05-09      |
+|             3 | 123456783 | Credit          |   1550 | 2021-05-22      |
+|             4 | 123456784 | Debit           |    800 | 2021-01-09      |
+|             5 | 123456785 | Debit           |   1010 | 2021-01-20      |
+|             6 | 123456786 | Credit          |   1015 | 2021-08-20      |
+|             7 | 123456787 | Debit           |  10000 | 2021-08-20      |
+|             8 | 123456788 | Credit          |   1000 | 2021-08-20      |
+|             9 | 123456789 | Debit           |  12000 | 2021-08-20      |
+|            10 | 123456789 | Credit          |  22000 | 2021-10-20      |
+|            11 | 123456789 | Debit           |   2500 | 2021-11-20      |
+|            12 | 123456783 | Credit          |   1550 | 2021-05-30      |
+|            13 | 123456787 | Credit          |   1550 | 2021-05-30      |
+|            14 | 123456781 | Credit          |  25000 | 2021-11-20      |
+|            15 | 123456783 | Debit           |   1550 | 2021-05-22      |
++---------------+-----------+-----------------+--------+-----------------+
+15 rows in set (0.00 sec)
+
+mysql> select * from TransactionInfo where AccountID=123456789 order by TransactionDate desc limit 5;
++---------------+-----------+-----------------+--------+-----------------+
+| TransactionID | AccountID | TransactionType | Amount | TransactionDate |
++---------------+-----------+-----------------+--------+-----------------+
+|            11 | 123456789 | Debit           |   2500 | 2021-11-20      |
+|            10 | 123456789 | Credit          |  22000 | 2021-10-20      |
+|             9 | 123456789 | Debit           |  12000 | 2021-08-20      |
++---------------+-----------+-----------------+--------+-----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from TransactionInfo where AccountID=123456789 and TransactionDate between '2021-09-01' and '2021-12-01';
++---------------+-----------+-----------------+--------+-----------------+
+| TransactionID | AccountID | TransactionType | Amount | TransactionDate |
++---------------+-----------+-----------------+--------+-----------------+
+|            10 | 123456789 | Credit          |  22000 | 2021-10-20      |
+|            11 | 123456789 | Debit           |   2500 | 2021-11-20      |
++---------------+-----------+-----------------+--------+-----------------+
+2 rows in set (0.00 sec)
+
+mysql> select * from AccountInfo where CustomerID=108;
+Empty set (0.01 sec)
+
+mysql> select * from AccountInfo where CustomerID=99;
++-----------+------------+----------------+----------------+-----------------+
+| AccountID | CustomerID | AccountType    | AccountBalance | AccountOpenDate |
++-----------+------------+----------------+----------------+-----------------+
+| 123456780 |         99 | Salary Account |          20000 | 2021-01-09      |
++-----------+------------+----------------+----------------+-----------------+
+1 row in set (0.00 sec)
+
+mysql> select a.CustomerID,a.CustomerName,a.CustomerAddress,a.CustomerMobileNo,b.AccountID,b.AccountBalance from CustomerInfo a,Accountinfo b where a.CustomerID=b.CustomerID;
+ERROR 1146 (42S02): Table 'bank.customerinfo' doesn't exist
+mysql> select a.CustomerID,a.CustomerName,a.CustomerAddress,a.CustomerMobileNo,b.AccountID,b.AccountBalance from CustomersInfo a,Accountinfo b where a.CustomerID=b.CustomerID;
++------------+--------------+---------------------+------------------+-----------+----------------+
+| CustomerID | CustomerName | CustomerAddress     | CustomerMobileNo | AccountID | AccountBalance |
++------------+--------------+---------------------+------------------+-----------+----------------+
+|         90 | Harshee      | 1/23,cross street   |       8508265406 | 123456789 |          35000 |
+|         91 | Kamalini     | 0/23,paris street   |       8489575415 | 123456788 |          30000 |
+|         92 | Mala         | 11/90,star street   |       9060305020 | 123456787 |          30000 |
+|         93 | priya        | 11/98,London street |       8123450200 | 123456786 |          10000 |
+|         94 | arthi        | 12/03,jolly street  |        251436748 | 123456785 |          20000 |
+|         95 | Deepss       | 12/11,Waste street  |        912356489 | 123456784 |          40000 |
+|         96 | DD           | 1/11,Best nagar     |        824833532 | 123456783 |          50000 |
+|         97 | Jaya         | 6/7,Bus nagar       |       9865753957 | 123456782 |          25000 |
+|         98 | Harshini     | 6/7,Don nagar       |       9442315497 | 123456781 |          15000 |
+|         99 | Kaaviya      | 2/9,ABC nagar       |        784596123 | 123456780 |          20000 |
++------------+--------------+---------------------+------------------+-----------+----------------+
+10 rows in set (0.00 sec)
+
+mysql> select a.AccountID,a.AccountBalance,b.TransactionID,b.Amount,b.TransactionType from AccountInfo a,TransactionInfo b where a.AccountID=b.AccountID;
++-----------+----------------+---------------+--------+-----------------+
+| AccountID | AccountBalance | TransactionID | Amount | TransactionType |
++-----------+----------------+---------------+--------+-----------------+
+| 123456780 |          20000 |             0 |   2000 | Debit           |
+| 123456781 |          15000 |            14 |  25000 | Credit          |
+| 123456782 |          25000 |             2 |   1000 | Credit          |
+| 123456783 |          50000 |             3 |   1550 | Credit          |
+| 123456783 |          50000 |            12 |   1550 | Credit          |
+| 123456783 |          50000 |            15 |   1550 | Debit           |
+| 123456784 |          40000 |             4 |    800 | Debit           |
+| 123456785 |          20000 |             5 |   1010 | Debit           |
+| 123456786 |          10000 |             6 |   1015 | Credit          |
+| 123456787 |          30000 |             7 |  10000 | Debit           |
+| 123456787 |          30000 |            13 |   1550 | Credit          |
+| 123456788 |          30000 |             8 |   1000 | Credit          |
+| 123456789 |          35000 |             9 |  12000 | Debit           |
+| 123456789 |          35000 |            10 |  22000 | Credit          |
+| 123456789 |          35000 |            11 |   2500 | Debit           |
++-----------+----------------+---------------+--------+-----------------+
+15 rows in set (0.00 sec)
+
+mysql> select a.CustomerID,a.CustomerName,a.CustomerAddress,a.CustomerMobileNo,b.AccountID,b.AccountBalance,c.TransactionID,c.Amount,c.TransactionType from CustomersInfo a,AccountInfo b,TransactionInfo c where a.CustomerID=b.CustomerID and b.AccountID=c.AccountID;
++------------+--------------+---------------------+------------------+-----------+----------------+---------------+--------+-----------------+
+| CustomerID | CustomerName | CustomerAddress     | CustomerMobileNo | AccountID | AccountBalance | TransactionID | Amount | TransactionType |
++------------+--------------+---------------------+------------------+-----------+----------------+---------------+--------+-----------------+
+|         90 | Harshee      | 1/23,cross street   |       8508265406 | 123456789 |          35000 |             9 |  12000 | Debit           |
+|         90 | Harshee      | 1/23,cross street   |       8508265406 | 123456789 |          35000 |            10 |  22000 | Credit          |
+|         90 | Harshee      | 1/23,cross street   |       8508265406 | 123456789 |          35000 |            11 |   2500 | Debit           |
+|         91 | Kamalini     | 0/23,paris street   |       8489575415 | 123456788 |          30000 |             8 |   1000 | Credit          |
+|         92 | Mala         | 11/90,star street   |       9060305020 | 123456787 |          30000 |             7 |  10000 | Debit           |
+|         92 | Mala         | 11/90,star street   |       9060305020 | 123456787 |          30000 |            13 |   1550 | Credit          |
+|         93 | priya        | 11/98,London street |       8123450200 | 123456786 |          10000 |             6 |   1015 | Credit          |
+|         94 | arthi        | 12/03,jolly street  |        251436748 | 123456785 |          20000 |             5 |   1010 | Debit           |
+|         95 | Deepss       | 12/11,Waste street  |        912356489 | 123456784 |          40000 |             4 |    800 | Debit           |
+|         96 | DD           | 1/11,Best nagar     |        824833532 | 123456783 |          50000 |             3 |   1550 | Credit          |
+|         96 | DD           | 1/11,Best nagar     |        824833532 | 123456783 |          50000 |            12 |   1550 | Credit          |
+|         96 | DD           | 1/11,Best nagar     |        824833532 | 123456783 |          50000 |            15 |   1550 | Debit           |
+|         97 | Jaya         | 6/7,Bus nagar       |       9865753957 | 123456782 |          25000 |             2 |   1000 | Credit          |
+|         98 | Harshini     | 6/7,Don nagar       |       9442315497 | 123456781 |          15000 |            14 |  25000 | Credit          |
+|         99 | Kaaviya      | 2/9,ABC nagar       |        784596123 | 123456780 |          20000 |             0 |   2000 | Debit           |
++------------+--------------+---------------------+------------------+-----------+----------------+---------------+--------+-----------------+
+15 rows in set (0.00 sec)
+
+

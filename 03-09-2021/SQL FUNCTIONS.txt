@@ -1,0 +1,3392 @@
+mysql> select ASCII('Guganya');
++------------------+
+| ASCII('Guganya') |
++------------------+
+|               71 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select CHAR_LENGTH('gugan');
++----------------------+
+| CHAR_LENGTH('gugan') |
++----------------------+
+|                    5 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT('Java ' ,'project');
++----------------------------+
+| CONCAT('Java ' ,'project') |
++----------------------------+
+| Java project               |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIELD(12,13,16,12);
++--------------------+
+| FIELD(12,13,16,12) |
++--------------------+
+|                  3 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT_ES('KP','Guganya','kathiravan');
+ERROR 1046 (3D000): No database selected
+mysql> select CONCAT_WS('KP','Guganya','kathiravan');
++----------------------------------------+
+| CONCAT_WS('KP','Guganya','kathiravan') |
++----------------------------------------+
+| GuganyaKPkathiravan                    |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O');
++--------------------------------------+
+| FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O') |
++--------------------------------------+
+|                                    7 |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FORMAT(12345.987456, 4);
++-------------------------+
+| FORMAT(12345.987456, 4) |
++-------------------------+
+| 12,345.9875             |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql> select INSTR('GUGANYA' , 'KP');
++-------------------------+
+| INSTR('GUGANYA' , 'KP') |
++-------------------------+
+|                       0 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select INSTR('GUGANYA' , 'N');
++------------------------+
+| INSTR('GUGANYA' , 'N') |
++------------------------+
+|                      5 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LCASE('GUGANYA');
++------------------+
+| LCASE('GUGANYA') |
++------------------+
+| guganya          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select LEFT('LANGUAGE' , '8');
++------------------------+
+| LEFT('LANGUAGE' , '8') |
++------------------------+
+| LANGUAGE               |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LENGTH('This is java project');
++--------------------------------+
+| LENGTH('This is java project') |
++--------------------------------+
+|                             20 |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LPAD('XXXXYYY' , 13, 'AB');
++----------------------------+
+| LPAD('XXXXYYY' , 13, 'AB') |
++----------------------------+
+| ABABABXXXXYYY              |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LTRIM('  GUGANYA');
++--------------------+
+| LTRIM('  GUGANYA') |
++--------------------+
+| GUGANYA            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('THIS IS MINE');
++-----------------------+
+| UPPER('THIS IS MINE') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('This is mine');
++-----------------------+
+| UPPER('This is mine') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select MID('mycollegekrishna' , 4, 7);
++--------------------------------+
+| MID('mycollegekrishna' , 4, 7) |
++--------------------------------+
+| ollegek                        |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPEAT('gugan' , 2);
++---------------------+
+| REPEAT('gugan' , 2) |
++---------------------+
+| gugangugan          |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select UCASE('kutta');
++----------------+
+| UCASE('kutta') |
++----------------+
+| KUTTA          |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select TRIM('    this is my project   ');
++-----------------------------------+
+| TRIM('    this is my project   ') |
++-----------------------------------+
+| this is my project                |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REVERSE('guganya');
++--------------------+
+| REVERSE('guganya') |
++--------------------+
+| aynagug            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganya' ,'kathiravan' , 'kp');
++-----------------------------------------+
+| REPLACE('guganya' ,'kathiravan' , 'kp') |
++-----------------------------------------+
+| guganya                                 |
++-----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganyakathiravan' ,'kathiravan' , 'kp');
++---------------------------------------------------+
+| REPLACE('guganyakathiravan' ,'kathiravan' , 'kp') |
++---------------------------------------------------+
+| guganyakp                                         |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RPAD('ABCX' , 5, 'CDE');
++-------------------------+
+| RPAD('ABCX' , 5, 'CDE') |
++-------------------------+
+| ABCXC                   |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RIGHT('nicehome' , 4);
++-----------------------+
+| RIGHT('nicehome' , 4) |
++-----------------------+
+| home                  |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select RTRIM('  THIS IS MY BEST DAY        ');
++----------------------------------------+
+| RTRIM('  THIS IS MY BEST DAY        ') |
++----------------------------------------+
+|   THIS IS MY BEST DAY                  |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SPACE(5);
++----------+
+| SPACE(5) |
++----------+
+|          |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select STRCMP('guganyakp' , 'kp');
++----------------------------+
+| STRCMP('guganyakp' , 'kp') |
++----------------------------+
+|                         -1 |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SUBSTR('Guganyakp ' , 6);
++--------------------------+
+| SUBSTR('Guganyakp ' , 6) |
++--------------------------+
+| yakp                     |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ABS(-41.34);
++-------------+
+| ABS(-41.34) |
++-------------+
+|       41.34 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ACOS(9.83);
++------------+
+| ACOS(9.83) |
++------------+
+|       NULL |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT ACOS(0.75);
++--------------------+
+| ACOS(0.75)         |
++--------------------+
+| 0.7227342478134157 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ASIN(0.786);
++--------------------+
+| ASIN(0.786)        |
++--------------------+
+| 0.9043119980874342 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN(-0.786);
++---------------------+
+| ATAN(-0.786)        |
++---------------------+
+| -0.6661458690119988 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN2(0.987, 2);
++---------------------+
+| ATAN2(0.987, 2)     |
++---------------------+
+| 0.45843410099322573 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CEIL(-41.56);
++--------------+
+| CEIL(-41.56) |
++--------------+
+|          -41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT COS(2.34);
++--------------------+
+| COS(2.34)          |
++--------------------+
+| -0.695563326462902 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COT(56);
++---------------------+
+| COT(56)             |
++---------------------+
+| -1.6359284217814665 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DEGREES(4.1);
++-------------------+
+| DEGREES(4.1)      |
++-------------------+
+| 234.9126960036375 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FLOOR(41.23);
++--------------+
+| FLOOR(41.23) |
++--------------+
+|           41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT  GREATEST(98,122,141,67);
++-------------------------+
+| GREATEST(98,122,141,67) |
++-------------------------+
+|                     141 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LEAST(-98, 141,23,0);
++----------------------+
+| LEAST(-98, 141,23,0) |
++----------------------+
+|                  -98 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG(9,2);
++--------------------+
+| LOG(9,2)           |
++--------------------+
+| 0.3154648767857287 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG10(2);
++--------------------+
+| LOG10(2)           |
++--------------------+
+| 0.3010299956639812 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG2(7);
++-------------------+
+| LOG2(7)           |
++-------------------+
+| 2.807354922057604 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> create database Employee;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql>  INSERT INTO Employee VALUES('Guganya' , 30000), ('priya' , 40000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT MAX(EMPSALARY) AS "HIGHEST SALARY" FROM Employee;
++----------------+
+| HIGHEST SALARY |
++----------------+
+|          40000 |
++----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT MIN(EMPSALARY) FROM Employee;
++----------------+
+| MIN(EMPSALARY) |
++----------------+
+|          30000 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MOD (34 , 6);
++--------------+
+| MOD (34 , 6) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PI();
++----------+
+| PI()     |
++----------+
+| 3.141593 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT POW(4, 2);
++-----------+
+| POW(4, 2) |
++-----------+
+|        16 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RADIANS(456);
++-------------------+
+| RADIANS(456)      |
++-------------------+
+| 7.958701389094143 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RAND()*(23-10)+10;
++-------------------+
+| RAND()*(23-10)+10 |
++-------------------+
+| 14.03346154189991 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ROUND(987.76);
++---------------+
+| ROUND(987.76) |
++---------------+
+|           988 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIGN(-87);
++-----------+
+| SIGN(-87) |
++-----------+
+|        -1 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIN(98);
++---------------------+
+| SIN(98)             |
++---------------------+
+| -0.5733818719904229 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SQRT(98);
++-------------------+
+| SQRT(98)          |
++-------------------+
+| 9.899494936611665 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TAN(-78.6);
++----------------------+
+| TAN(-78.6)           |
++----------------------+
+| -0.06025642888915171 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TRUNCATE(123.67, 8);
++---------------------+
+| TRUNCATE(123.67, 8) |
++---------------------+
+|              123.67 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE SALARY;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE SALARY;
+Database changed
+mysql> CREATE TABLE SALARY(EMPNAME INT , EMPSALARY INT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> UPDATE TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT)' at line 1
+mysql> USE Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1050 (42S01): Table 'employee' already exists
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT BINARY('MYSQL LANGUAGE');
++----------------------------------------------------+
+| BINARY('MYSQL LANGUAGE')                           |
++----------------------------------------------------+
+| 0x4D5953514C204C414E4755414745                     |
++----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COALESCE(NULL , NULL, 'PRIYA' , NULL);
++---------------------------------------+
+| COALESCE(NULL , NULL, 'PRIYA' , NULL) |
++---------------------------------------+
+| PRIYA                                 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONNECTION_ID();
++-----------------+
+| CONNECTION_ID() |
++-----------------+
+|              39 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE HCLEMP;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| employee   |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT USER();
++----------------+
+| USER()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IF(141>138 , 'YES' ,'NO');
++---------------------------+
+| IF(141>138 , 'YES' ,'NO') |
++---------------------------+
+| YES                       |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IFNULL('GUGANYA' , 'KP');
++--------------------------+
+| IFNULL('GUGANYA' , 'KP') |
++--------------------------+
+| GUGANYA                  |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ISNULL(0);
++-----------+
+| ISNULL(0) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NULLIF(7,7);
++-------------+
+| NULLIF(7,7) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT VERSION();
++-----------+
+| VERSION() |
++-----------+
+| 8.0.26    |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ADDDATE('2021-09-05', INTERVAL 7 YEAR);
++----------------------------------------+
+| ADDDATE('2021-09-05', INTERVAL 7 YEAR) |
++----------------------------------------+
+| 2028-09-05                             |
++----------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT ADDTIME('09:23:12', '2:12:02');
++--------------------------------+
+| ADDTIME('09:23:12', '2:12:02') |
++--------------------------------+
+| 11:35:14                       |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURDATE();
++------------+
+| CURDATE()  |
++------------+
+| 2021-09-06 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIME();
++----------------+
+| CURRENT_TIME() |
++----------------+
+| 14:49:43       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIMESTAMP()+3;
++-----------------------+
+| CURRENT_TIMESTAMP()+3 |
++-----------------------+
+|        20210906144957 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE(2021-09-05);
++------------------+
+| DATE(2021-09-05) |
++------------------+
+| NULL             |
++------------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> SELECT DATE('2021-09-05');
++--------------------+
+| DATE('2021-09-05') |
++--------------------+
+| 2021-09-05         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE_FORMAT('2021-09-05' , '%M %E %Y %W');
++-------------------------------------------+
+| DATE_FORMAT('2021-09-05' , '%M %E %Y %W') |
++-------------------------------------------+
+| September E 2021 Sunday                   |
++-------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT DATEDIFF('2021-09-05' , '2021-09-12');
++---------------------------------------+
+| DATEDIFF('2021-09-05' , '2021-09-12') |
++---------------------------------------+
+|                                    -7 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAY('2021-09-05');
++-------------------+
+| DAY('2021-09-05') |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYNAME('2021-09-15');
++-----------------------+
+| DAYNAME('2021-09-15') |
++-----------------------+
+| Wednesday             |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFMONTH('2021-08-03');
++--------------------------+
+| DAYOFMONTH('2021-08-03') |
++--------------------------+
+|                        3 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFWEEK('2021-09-15');
++-------------------------+
+| DAYOFWEEK('2021-09-15') |
++-------------------------+
+|                       4 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFYEAR('2021-09-15');
++-------------------------+
+| DAYOFYEAR('2021-09-15') |
++-------------------------+
+|                     258 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LAST_DAY('2021-09-12');
++------------------------+
+| LAST_DAY('2021-09-12') |
++------------------------+
+| 2021-09-30             |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:52:19 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2021-09-06 14:52:40 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PERIOD_ADD(211402,3);
++----------------------+
+| PERIOD_ADD(211402,3) |
++----------------------+
+|               211405 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT WEEKDAY('2021-09-05');
++-----------------------+
+| WEEKDAY('2021-09-05') |
++-----------------------+
+|                     6 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SYSDATE();
++---------------------+
+| SYSDATE()           |
++---------------------+
+| 2021-09-06 14:53:27 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:54:11 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql>
+
+
+
+mysql> select ASCII('Guganya');
++------------------+
+| ASCII('Guganya') |
++------------------+
+|               71 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select CHAR_LENGTH('gugan');
++----------------------+
+| CHAR_LENGTH('gugan') |
++----------------------+
+|                    5 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT('Java ' ,'project');
++----------------------------+
+| CONCAT('Java ' ,'project') |
++----------------------------+
+| Java project               |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIELD(12,13,16,12);
++--------------------+
+| FIELD(12,13,16,12) |
++--------------------+
+|                  3 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT_ES('KP','Guganya','kathiravan');
+ERROR 1046 (3D000): No database selected
+mysql> select CONCAT_WS('KP','Guganya','kathiravan');
++----------------------------------------+
+| CONCAT_WS('KP','Guganya','kathiravan') |
++----------------------------------------+
+| GuganyaKPkathiravan                    |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O');
++--------------------------------------+
+| FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O') |
++--------------------------------------+
+|                                    7 |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FORMAT(12345.987456, 4);
++-------------------------+
+| FORMAT(12345.987456, 4) |
++-------------------------+
+| 12,345.9875             |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql> select INSTR('GUGANYA' , 'KP');
++-------------------------+
+| INSTR('GUGANYA' , 'KP') |
++-------------------------+
+|                       0 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select INSTR('GUGANYA' , 'N');
++------------------------+
+| INSTR('GUGANYA' , 'N') |
++------------------------+
+|                      5 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LCASE('GUGANYA');
++------------------+
+| LCASE('GUGANYA') |
++------------------+
+| guganya          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select LEFT('LANGUAGE' , '8');
++------------------------+
+| LEFT('LANGUAGE' , '8') |
++------------------------+
+| LANGUAGE               |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LENGTH('This is java project');
++--------------------------------+
+| LENGTH('This is java project') |
++--------------------------------+
+|                             20 |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LPAD('XXXXYYY' , 13, 'AB');
++----------------------------+
+| LPAD('XXXXYYY' , 13, 'AB') |
++----------------------------+
+| ABABABXXXXYYY              |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LTRIM('  GUGANYA');
++--------------------+
+| LTRIM('  GUGANYA') |
++--------------------+
+| GUGANYA            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('THIS IS MINE');
++-----------------------+
+| UPPER('THIS IS MINE') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('This is mine');
++-----------------------+
+| UPPER('This is mine') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select MID('mycollegekrishna' , 4, 7);
++--------------------------------+
+| MID('mycollegekrishna' , 4, 7) |
++--------------------------------+
+| ollegek                        |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPEAT('gugan' , 2);
++---------------------+
+| REPEAT('gugan' , 2) |
++---------------------+
+| gugangugan          |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select UCASE('kutta');
++----------------+
+| UCASE('kutta') |
++----------------+
+| KUTTA          |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select TRIM('    this is my project   ');
++-----------------------------------+
+| TRIM('    this is my project   ') |
++-----------------------------------+
+| this is my project                |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REVERSE('guganya');
++--------------------+
+| REVERSE('guganya') |
++--------------------+
+| aynagug            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganya' ,'kathiravan' , 'kp');
++-----------------------------------------+
+| REPLACE('guganya' ,'kathiravan' , 'kp') |
++-----------------------------------------+
+| guganya                                 |
++-----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganyakathiravan' ,'kathiravan' , 'kp');
++---------------------------------------------------+
+| REPLACE('guganyakathiravan' ,'kathiravan' , 'kp') |
++---------------------------------------------------+
+| guganyakp                                         |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RPAD('ABCX' , 5, 'CDE');
++-------------------------+
+| RPAD('ABCX' , 5, 'CDE') |
++-------------------------+
+| ABCXC                   |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RIGHT('nicehome' , 4);
++-----------------------+
+| RIGHT('nicehome' , 4) |
++-----------------------+
+| home                  |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select RTRIM('  THIS IS MY BEST DAY        ');
++----------------------------------------+
+| RTRIM('  THIS IS MY BEST DAY        ') |
++----------------------------------------+
+|   THIS IS MY BEST DAY                  |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SPACE(5);
++----------+
+| SPACE(5) |
++----------+
+|          |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select STRCMP('guganyakp' , 'kp');
++----------------------------+
+| STRCMP('guganyakp' , 'kp') |
++----------------------------+
+|                         -1 |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SUBSTR('Guganyakp ' , 6);
++--------------------------+
+| SUBSTR('Guganyakp ' , 6) |
++--------------------------+
+| yakp                     |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ABS(-41.34);
++-------------+
+| ABS(-41.34) |
++-------------+
+|       41.34 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ACOS(9.83);
++------------+
+| ACOS(9.83) |
++------------+
+|       NULL |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT ACOS(0.75);
++--------------------+
+| ACOS(0.75)         |
++--------------------+
+| 0.7227342478134157 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ASIN(0.786);
++--------------------+
+| ASIN(0.786)        |
++--------------------+
+| 0.9043119980874342 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN(-0.786);
++---------------------+
+| ATAN(-0.786)        |
++---------------------+
+| -0.6661458690119988 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN2(0.987, 2);
++---------------------+
+| ATAN2(0.987, 2)     |
++---------------------+
+| 0.45843410099322573 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CEIL(-41.56);
++--------------+
+| CEIL(-41.56) |
++--------------+
+|          -41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT COS(2.34);
++--------------------+
+| COS(2.34)          |
++--------------------+
+| -0.695563326462902 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COT(56);
++---------------------+
+| COT(56)             |
++---------------------+
+| -1.6359284217814665 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DEGREES(4.1);
++-------------------+
+| DEGREES(4.1)      |
++-------------------+
+| 234.9126960036375 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FLOOR(41.23);
++--------------+
+| FLOOR(41.23) |
++--------------+
+|           41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT  GREATEST(98,122,141,67);
++-------------------------+
+| GREATEST(98,122,141,67) |
++-------------------------+
+|                     141 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LEAST(-98, 141,23,0);
++----------------------+
+| LEAST(-98, 141,23,0) |
++----------------------+
+|                  -98 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG(9,2);
++--------------------+
+| LOG(9,2)           |
++--------------------+
+| 0.3154648767857287 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG10(2);
++--------------------+
+| LOG10(2)           |
++--------------------+
+| 0.3010299956639812 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG2(7);
++-------------------+
+| LOG2(7)           |
++-------------------+
+| 2.807354922057604 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> create database Employee;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql>  INSERT INTO Employee VALUES('Guganya' , 30000), ('priya' , 40000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT MAX(EMPSALARY) AS "HIGHEST SALARY" FROM Employee;
++----------------+
+| HIGHEST SALARY |
++----------------+
+|          40000 |
++----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT MIN(EMPSALARY) FROM Employee;
++----------------+
+| MIN(EMPSALARY) |
++----------------+
+|          30000 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MOD (34 , 6);
++--------------+
+| MOD (34 , 6) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PI();
++----------+
+| PI()     |
++----------+
+| 3.141593 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT POW(4, 2);
++-----------+
+| POW(4, 2) |
++-----------+
+|        16 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RADIANS(456);
++-------------------+
+| RADIANS(456)      |
++-------------------+
+| 7.958701389094143 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RAND()*(23-10)+10;
++-------------------+
+| RAND()*(23-10)+10 |
++-------------------+
+| 14.03346154189991 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ROUND(987.76);
++---------------+
+| ROUND(987.76) |
++---------------+
+|           988 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIGN(-87);
++-----------+
+| SIGN(-87) |
++-----------+
+|        -1 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIN(98);
++---------------------+
+| SIN(98)             |
++---------------------+
+| -0.5733818719904229 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SQRT(98);
++-------------------+
+| SQRT(98)          |
++-------------------+
+| 9.899494936611665 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TAN(-78.6);
++----------------------+
+| TAN(-78.6)           |
++----------------------+
+| -0.06025642888915171 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TRUNCATE(123.67, 8);
++---------------------+
+| TRUNCATE(123.67, 8) |
++---------------------+
+|              123.67 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE SALARY;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE SALARY;
+Database changed
+mysql> CREATE TABLE SALARY(EMPNAME INT , EMPSALARY INT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> UPDATE TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT)' at line 1
+mysql> USE Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1050 (42S01): Table 'employee' already exists
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT BINARY('MYSQL LANGUAGE');
++----------------------------------------------------+
+| BINARY('MYSQL LANGUAGE')                           |
++----------------------------------------------------+
+| 0x4D5953514C204C414E4755414745                     |
++----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COALESCE(NULL , NULL, 'PRIYA' , NULL);
++---------------------------------------+
+| COALESCE(NULL , NULL, 'PRIYA' , NULL) |
++---------------------------------------+
+| PRIYA                                 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONNECTION_ID();
++-----------------+
+| CONNECTION_ID() |
++-----------------+
+|              39 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE HCLEMP;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| employee   |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT USER();
++----------------+
+| USER()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IF(141>138 , 'YES' ,'NO');
++---------------------------+
+| IF(141>138 , 'YES' ,'NO') |
++---------------------------+
+| YES                       |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IFNULL('GUGANYA' , 'KP');
++--------------------------+
+| IFNULL('GUGANYA' , 'KP') |
++--------------------------+
+| GUGANYA                  |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ISNULL(0);
++-----------+
+| ISNULL(0) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NULLIF(7,7);
++-------------+
+| NULLIF(7,7) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT VERSION();
++-----------+
+| VERSION() |
++-----------+
+| 8.0.26    |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ADDDATE('2021-09-05', INTERVAL 7 YEAR);
++----------------------------------------+
+| ADDDATE('2021-09-05', INTERVAL 7 YEAR) |
++----------------------------------------+
+| 2028-09-05                             |
++----------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT ADDTIME('09:23:12', '2:12:02');
++--------------------------------+
+| ADDTIME('09:23:12', '2:12:02') |
++--------------------------------+
+| 11:35:14                       |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURDATE();
++------------+
+| CURDATE()  |
++------------+
+| 2021-09-06 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIME();
++----------------+
+| CURRENT_TIME() |
++----------------+
+| 14:49:43       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIMESTAMP()+3;
++-----------------------+
+| CURRENT_TIMESTAMP()+3 |
++-----------------------+
+|        20210906144957 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE(2021-09-05);
++------------------+
+| DATE(2021-09-05) |
++------------------+
+| NULL             |
++------------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> SELECT DATE('2021-09-05');
++--------------------+
+| DATE('2021-09-05') |
++--------------------+
+| 2021-09-05         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE_FORMAT('2021-09-05' , '%M %E %Y %W');
++-------------------------------------------+
+| DATE_FORMAT('2021-09-05' , '%M %E %Y %W') |
++-------------------------------------------+
+| September E 2021 Sunday                   |
++-------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT DATEDIFF('2021-09-05' , '2021-09-12');
++---------------------------------------+
+| DATEDIFF('2021-09-05' , '2021-09-12') |
++---------------------------------------+
+|                                    -7 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAY('2021-09-05');
++-------------------+
+| DAY('2021-09-05') |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYNAME('2021-09-15');
++-----------------------+
+| DAYNAME('2021-09-15') |
++-----------------------+
+| Wednesday             |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFMONTH('2021-08-03');
++--------------------------+
+| DAYOFMONTH('2021-08-03') |
++--------------------------+
+|                        3 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFWEEK('2021-09-15');
++-------------------------+
+| DAYOFWEEK('2021-09-15') |
++-------------------------+
+|                       4 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFYEAR('2021-09-15');
++-------------------------+
+| DAYOFYEAR('2021-09-15') |
++-------------------------+
+|                     258 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LAST_DAY('2021-09-12');
++------------------------+
+| LAST_DAY('2021-09-12') |
++------------------------+
+| 2021-09-30             |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:52:19 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2021-09-06 14:52:40 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PERIOD_ADD(211402,3);
++----------------------+
+| PERIOD_ADD(211402,3) |
++----------------------+
+|               211405 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT WEEKDAY('2021-09-05');
++-----------------------+
+| WEEKDAY('2021-09-05') |
++-----------------------+
+|                     6 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SYSDATE();
++---------------------+
+| SYSDATE()           |
++---------------------+
+| 2021-09-06 14:53:27 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:54:11 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql>
+
+
+
+
+
+
+
+
+
+mysql> select ASCII('Guganya');
++------------------+
+| ASCII('Guganya') |
++------------------+
+|               71 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select CHAR_LENGTH('gugan');
++----------------------+
+| CHAR_LENGTH('gugan') |
++----------------------+
+|                    5 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT('Java ' ,'project');
++----------------------------+
+| CONCAT('Java ' ,'project') |
++----------------------------+
+| Java project               |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIELD(12,13,16,12);
++--------------------+
+| FIELD(12,13,16,12) |
++--------------------+
+|                  3 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT_ES('KP','Guganya','kathiravan');
+ERROR 1046 (3D000): No database selected
+mysql> select CONCAT_WS('KP','Guganya','kathiravan');
++----------------------------------------+
+| CONCAT_WS('KP','Guganya','kathiravan') |
++----------------------------------------+
+| GuganyaKPkathiravan                    |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O');
++--------------------------------------+
+| FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O') |
++--------------------------------------+
+|                                    7 |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FORMAT(12345.987456, 4);
++-------------------------+
+| FORMAT(12345.987456, 4) |
++-------------------------+
+| 12,345.9875             |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql> select INSTR('GUGANYA' , 'KP');
++-------------------------+
+| INSTR('GUGANYA' , 'KP') |
++-------------------------+
+|                       0 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select INSTR('GUGANYA' , 'N');
++------------------------+
+| INSTR('GUGANYA' , 'N') |
++------------------------+
+|                      5 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LCASE('GUGANYA');
++------------------+
+| LCASE('GUGANYA') |
++------------------+
+| guganya          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select LEFT('LANGUAGE' , '8');
++------------------------+
+| LEFT('LANGUAGE' , '8') |
++------------------------+
+| LANGUAGE               |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LENGTH('This is java project');
++--------------------------------+
+| LENGTH('This is java project') |
++--------------------------------+
+|                             20 |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LPAD('XXXXYYY' , 13, 'AB');
++----------------------------+
+| LPAD('XXXXYYY' , 13, 'AB') |
++----------------------------+
+| ABABABXXXXYYY              |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LTRIM('  GUGANYA');
++--------------------+
+| LTRIM('  GUGANYA') |
++--------------------+
+| GUGANYA            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('THIS IS MINE');
++-----------------------+
+| UPPER('THIS IS MINE') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('This is mine');
++-----------------------+
+| UPPER('This is mine') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select MID('mycollegekrishna' , 4, 7);
++--------------------------------+
+| MID('mycollegekrishna' , 4, 7) |
++--------------------------------+
+| ollegek                        |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPEAT('gugan' , 2);
++---------------------+
+| REPEAT('gugan' , 2) |
++---------------------+
+| gugangugan          |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select UCASE('kutta');
++----------------+
+| UCASE('kutta') |
++----------------+
+| KUTTA          |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select TRIM('    this is my project   ');
++-----------------------------------+
+| TRIM('    this is my project   ') |
++-----------------------------------+
+| this is my project                |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REVERSE('guganya');
++--------------------+
+| REVERSE('guganya') |
++--------------------+
+| aynagug            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganya' ,'kathiravan' , 'kp');
++-----------------------------------------+
+| REPLACE('guganya' ,'kathiravan' , 'kp') |
++-----------------------------------------+
+| guganya                                 |
++-----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganyakathiravan' ,'kathiravan' , 'kp');
++---------------------------------------------------+
+| REPLACE('guganyakathiravan' ,'kathiravan' , 'kp') |
++---------------------------------------------------+
+| guganyakp                                         |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RPAD('ABCX' , 5, 'CDE');
++-------------------------+
+| RPAD('ABCX' , 5, 'CDE') |
++-------------------------+
+| ABCXC                   |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RIGHT('nicehome' , 4);
++-----------------------+
+| RIGHT('nicehome' , 4) |
++-----------------------+
+| home                  |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select RTRIM('  THIS IS MY BEST DAY        ');
++----------------------------------------+
+| RTRIM('  THIS IS MY BEST DAY        ') |
++----------------------------------------+
+|   THIS IS MY BEST DAY                  |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SPACE(5);
++----------+
+| SPACE(5) |
++----------+
+|          |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select STRCMP('guganyakp' , 'kp');
++----------------------------+
+| STRCMP('guganyakp' , 'kp') |
++----------------------------+
+|                         -1 |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SUBSTR('Guganyakp ' , 6);
++--------------------------+
+| SUBSTR('Guganyakp ' , 6) |
++--------------------------+
+| yakp                     |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ABS(-41.34);
++-------------+
+| ABS(-41.34) |
++-------------+
+|       41.34 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ACOS(9.83);
++------------+
+| ACOS(9.83) |
++------------+
+|       NULL |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT ACOS(0.75);
++--------------------+
+| ACOS(0.75)         |
++--------------------+
+| 0.7227342478134157 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ASIN(0.786);
++--------------------+
+| ASIN(0.786)        |
++--------------------+
+| 0.9043119980874342 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN(-0.786);
++---------------------+
+| ATAN(-0.786)        |
++---------------------+
+| -0.6661458690119988 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN2(0.987, 2);
++---------------------+
+| ATAN2(0.987, 2)     |
++---------------------+
+| 0.45843410099322573 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CEIL(-41.56);
++--------------+
+| CEIL(-41.56) |
++--------------+
+|          -41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT COS(2.34);
++--------------------+
+| COS(2.34)          |
++--------------------+
+| -0.695563326462902 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COT(56);
++---------------------+
+| COT(56)             |
++---------------------+
+| -1.6359284217814665 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DEGREES(4.1);
++-------------------+
+| DEGREES(4.1)      |
++-------------------+
+| 234.9126960036375 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FLOOR(41.23);
++--------------+
+| FLOOR(41.23) |
++--------------+
+|           41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT  GREATEST(98,122,141,67);
++-------------------------+
+| GREATEST(98,122,141,67) |
++-------------------------+
+|                     141 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LEAST(-98, 141,23,0);
++----------------------+
+| LEAST(-98, 141,23,0) |
++----------------------+
+|                  -98 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG(9,2);
++--------------------+
+| LOG(9,2)           |
++--------------------+
+| 0.3154648767857287 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG10(2);
++--------------------+
+| LOG10(2)           |
++--------------------+
+| 0.3010299956639812 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG2(7);
++-------------------+
+| LOG2(7)           |
++-------------------+
+| 2.807354922057604 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> create database Employee;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql>  INSERT INTO Employee VALUES('Guganya' , 30000), ('priya' , 40000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT MAX(EMPSALARY) AS "HIGHEST SALARY" FROM Employee;
++----------------+
+| HIGHEST SALARY |
++----------------+
+|          40000 |
++----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT MIN(EMPSALARY) FROM Employee;
++----------------+
+| MIN(EMPSALARY) |
++----------------+
+|          30000 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MOD (34 , 6);
++--------------+
+| MOD (34 , 6) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PI();
++----------+
+| PI()     |
++----------+
+| 3.141593 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT POW(4, 2);
++-----------+
+| POW(4, 2) |
++-----------+
+|        16 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RADIANS(456);
++-------------------+
+| RADIANS(456)      |
++-------------------+
+| 7.958701389094143 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RAND()*(23-10)+10;
++-------------------+
+| RAND()*(23-10)+10 |
++-------------------+
+| 14.03346154189991 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ROUND(987.76);
++---------------+
+| ROUND(987.76) |
++---------------+
+|           988 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIGN(-87);
++-----------+
+| SIGN(-87) |
++-----------+
+|        -1 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIN(98);
++---------------------+
+| SIN(98)             |
++---------------------+
+| -0.5733818719904229 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SQRT(98);
++-------------------+
+| SQRT(98)          |
++-------------------+
+| 9.899494936611665 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TAN(-78.6);
++----------------------+
+| TAN(-78.6)           |
++----------------------+
+| -0.06025642888915171 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TRUNCATE(123.67, 8);
++---------------------+
+| TRUNCATE(123.67, 8) |
++---------------------+
+|              123.67 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE SALARY;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE SALARY;
+Database changed
+mysql> CREATE TABLE SALARY(EMPNAME INT , EMPSALARY INT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> UPDATE TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT)' at line 1
+mysql> USE Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1050 (42S01): Table 'employee' already exists
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT BINARY('MYSQL LANGUAGE');
++----------------------------------------------------+
+| BINARY('MYSQL LANGUAGE')                           |
++----------------------------------------------------+
+| 0x4D5953514C204C414E4755414745                     |
++----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COALESCE(NULL , NULL, 'PRIYA' , NULL);
++---------------------------------------+
+| COALESCE(NULL , NULL, 'PRIYA' , NULL) |
++---------------------------------------+
+| PRIYA                                 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONNECTION_ID();
++-----------------+
+| CONNECTION_ID() |
++-----------------+
+|              39 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE HCLEMP;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| employee   |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT USER();
++----------------+
+| USER()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IF(141>138 , 'YES' ,'NO');
++---------------------------+
+| IF(141>138 , 'YES' ,'NO') |
++---------------------------+
+| YES                       |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IFNULL('GUGANYA' , 'KP');
++--------------------------+
+| IFNULL('GUGANYA' , 'KP') |
++--------------------------+
+| GUGANYA                  |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ISNULL(0);
++-----------+
+| ISNULL(0) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NULLIF(7,7);
++-------------+
+| NULLIF(7,7) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT VERSION();
++-----------+
+| VERSION() |
++-----------+
+| 8.0.26    |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ADDDATE('2021-09-05', INTERVAL 7 YEAR);
++----------------------------------------+
+| ADDDATE('2021-09-05', INTERVAL 7 YEAR) |
++----------------------------------------+
+| 2028-09-05                             |
++----------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT ADDTIME('09:23:12', '2:12:02');
++--------------------------------+
+| ADDTIME('09:23:12', '2:12:02') |
++--------------------------------+
+| 11:35:14                       |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURDATE();
++------------+
+| CURDATE()  |
++------------+
+| 2021-09-06 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIME();
++----------------+
+| CURRENT_TIME() |
++----------------+
+| 14:49:43       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIMESTAMP()+3;
++-----------------------+
+| CURRENT_TIMESTAMP()+3 |
++-----------------------+
+|        20210906144957 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE(2021-09-05);
++------------------+
+| DATE(2021-09-05) |
++------------------+
+| NULL             |
++------------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> SELECT DATE('2021-09-05');
++--------------------+
+| DATE('2021-09-05') |
++--------------------+
+| 2021-09-05         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE_FORMAT('2021-09-05' , '%M %E %Y %W');
++-------------------------------------------+
+| DATE_FORMAT('2021-09-05' , '%M %E %Y %W') |
++-------------------------------------------+
+| September E 2021 Sunday                   |
++-------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT DATEDIFF('2021-09-05' , '2021-09-12');
++---------------------------------------+
+| DATEDIFF('2021-09-05' , '2021-09-12') |
++---------------------------------------+
+|                                    -7 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAY('2021-09-05');
++-------------------+
+| DAY('2021-09-05') |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYNAME('2021-09-15');
++-----------------------+
+| DAYNAME('2021-09-15') |
++-----------------------+
+| Wednesday             |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFMONTH('2021-08-03');
++--------------------------+
+| DAYOFMONTH('2021-08-03') |
++--------------------------+
+|                        3 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFWEEK('2021-09-15');
++-------------------------+
+| DAYOFWEEK('2021-09-15') |
++-------------------------+
+|                       4 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFYEAR('2021-09-15');
++-------------------------+
+| DAYOFYEAR('2021-09-15') |
++-------------------------+
+|                     258 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LAST_DAY('2021-09-12');
++------------------------+
+| LAST_DAY('2021-09-12') |
++------------------------+
+| 2021-09-30             |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:52:19 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2021-09-06 14:52:40 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PERIOD_ADD(211402,3);
++----------------------+
+| PERIOD_ADD(211402,3) |
++----------------------+
+|               211405 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT WEEKDAY('2021-09-05');
++-----------------------+
+| WEEKDAY('2021-09-05') |
++-----------------------+
+|                     6 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SYSDATE();
++---------------------+
+| SYSDATE()           |
++---------------------+
+| 2021-09-06 14:53:27 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:54:11 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql>
+
+
+
+mysql> select ASCII('Guganya');
++------------------+
+| ASCII('Guganya') |
++------------------+
+|               71 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select CHAR_LENGTH('gugan');
++----------------------+
+| CHAR_LENGTH('gugan') |
++----------------------+
+|                    5 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT('Java ' ,'project');
++----------------------------+
+| CONCAT('Java ' ,'project') |
++----------------------------+
+| Java project               |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIELD(12,13,16,12);
++--------------------+
+| FIELD(12,13,16,12) |
++--------------------+
+|                  3 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONCAT_ES('KP','Guganya','kathiravan');
+ERROR 1046 (3D000): No database selected
+mysql> select CONCAT_WS('KP','Guganya','kathiravan');
++----------------------------------------+
+| CONCAT_WS('KP','Guganya','kathiravan') |
++----------------------------------------+
+| GuganyaKPkathiravan                    |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O');
++--------------------------------------+
+| FIND_IN_SET('S' , 'A,B,N,D,K,F,S,O') |
++--------------------------------------+
+|                                    7 |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select FORMAT(12345.987456, 4);
++-------------------------+
+| FORMAT(12345.987456, 4) |
++-------------------------+
+| 12,345.9875             |
++-------------------------+
+1 row in set (0.01 sec)
+
+mysql> select INSTR('GUGANYA' , 'KP');
++-------------------------+
+| INSTR('GUGANYA' , 'KP') |
++-------------------------+
+|                       0 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select INSTR('GUGANYA' , 'N');
++------------------------+
+| INSTR('GUGANYA' , 'N') |
++------------------------+
+|                      5 |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LCASE('GUGANYA');
++------------------+
+| LCASE('GUGANYA') |
++------------------+
+| guganya          |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> select LEFT('LANGUAGE' , '8');
++------------------------+
+| LEFT('LANGUAGE' , '8') |
++------------------------+
+| LANGUAGE               |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LENGTH('This is java project');
++--------------------------------+
+| LENGTH('This is java project') |
++--------------------------------+
+|                             20 |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LPAD('XXXXYYY' , 13, 'AB');
++----------------------------+
+| LPAD('XXXXYYY' , 13, 'AB') |
++----------------------------+
+| ABABABXXXXYYY              |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select LTRIM('  GUGANYA');
++--------------------+
+| LTRIM('  GUGANYA') |
++--------------------+
+| GUGANYA            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('THIS IS MINE');
++-----------------------+
+| UPPER('THIS IS MINE') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select UPPER('This is mine');
++-----------------------+
+| UPPER('This is mine') |
++-----------------------+
+| THIS IS MINE          |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select MID('mycollegekrishna' , 4, 7);
++--------------------------------+
+| MID('mycollegekrishna' , 4, 7) |
++--------------------------------+
+| ollegek                        |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPEAT('gugan' , 2);
++---------------------+
+| REPEAT('gugan' , 2) |
++---------------------+
+| gugangugan          |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select UCASE('kutta');
++----------------+
+| UCASE('kutta') |
++----------------+
+| KUTTA          |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> select TRIM('    this is my project   ');
++-----------------------------------+
+| TRIM('    this is my project   ') |
++-----------------------------------+
+| this is my project                |
++-----------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REVERSE('guganya');
++--------------------+
+| REVERSE('guganya') |
++--------------------+
+| aynagug            |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganya' ,'kathiravan' , 'kp');
++-----------------------------------------+
+| REPLACE('guganya' ,'kathiravan' , 'kp') |
++-----------------------------------------+
+| guganya                                 |
++-----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select REPLACE('guganyakathiravan' ,'kathiravan' , 'kp');
++---------------------------------------------------+
+| REPLACE('guganyakathiravan' ,'kathiravan' , 'kp') |
++---------------------------------------------------+
+| guganyakp                                         |
++---------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RPAD('ABCX' , 5, 'CDE');
++-------------------------+
+| RPAD('ABCX' , 5, 'CDE') |
++-------------------------+
+| ABCXC                   |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> select RIGHT('nicehome' , 4);
++-----------------------+
+| RIGHT('nicehome' , 4) |
++-----------------------+
+| home                  |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select RTRIM('  THIS IS MY BEST DAY        ');
++----------------------------------------+
+| RTRIM('  THIS IS MY BEST DAY        ') |
++----------------------------------------+
+|   THIS IS MY BEST DAY                  |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SPACE(5);
++----------+
+| SPACE(5) |
++----------+
+|          |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select STRCMP('guganyakp' , 'kp');
++----------------------------+
+| STRCMP('guganyakp' , 'kp') |
++----------------------------+
+|                         -1 |
++----------------------------+
+1 row in set (0.00 sec)
+
+mysql> select SUBSTR('Guganyakp ' , 6);
++--------------------------+
+| SUBSTR('Guganyakp ' , 6) |
++--------------------------+
+| yakp                     |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> select ABS(-41.34);
++-------------+
+| ABS(-41.34) |
++-------------+
+|       41.34 |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ACOS(9.83);
++------------+
+| ACOS(9.83) |
++------------+
+|       NULL |
++------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT ACOS(0.75);
++--------------------+
+| ACOS(0.75)         |
++--------------------+
+| 0.7227342478134157 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ASIN(0.786);
++--------------------+
+| ASIN(0.786)        |
++--------------------+
+| 0.9043119980874342 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN(-0.786);
++---------------------+
+| ATAN(-0.786)        |
++---------------------+
+| -0.6661458690119988 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ATAN2(0.987, 2);
++---------------------+
+| ATAN2(0.987, 2)     |
++---------------------+
+| 0.45843410099322573 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CEIL(-41.56);
++--------------+
+| CEIL(-41.56) |
++--------------+
+|          -41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql>  SELECT COS(2.34);
++--------------------+
+| COS(2.34)          |
++--------------------+
+| -0.695563326462902 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COT(56);
++---------------------+
+| COT(56)             |
++---------------------+
+| -1.6359284217814665 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DEGREES(4.1);
++-------------------+
+| DEGREES(4.1)      |
++-------------------+
+| 234.9126960036375 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FLOOR(41.23);
++--------------+
+| FLOOR(41.23) |
++--------------+
+|           41 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT  GREATEST(98,122,141,67);
++-------------------------+
+| GREATEST(98,122,141,67) |
++-------------------------+
+|                     141 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LEAST(-98, 141,23,0);
++----------------------+
+| LEAST(-98, 141,23,0) |
++----------------------+
+|                  -98 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG(9,2);
++--------------------+
+| LOG(9,2)           |
++--------------------+
+| 0.3154648767857287 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG10(2);
++--------------------+
+| LOG10(2)           |
++--------------------+
+| 0.3010299956639812 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOG2(7);
++-------------------+
+| LOG2(7)           |
++-------------------+
+| 2.807354922057604 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> create database Employee;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> use Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql>  INSERT INTO Employee VALUES('Guganya' , 30000), ('priya' , 40000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT MAX(EMPSALARY) AS "HIGHEST SALARY" FROM Employee;
++----------------+
+| HIGHEST SALARY |
++----------------+
+|          40000 |
++----------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT MIN(EMPSALARY) FROM Employee;
++----------------+
+| MIN(EMPSALARY) |
++----------------+
+|          30000 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MOD (34 , 6);
++--------------+
+| MOD (34 , 6) |
++--------------+
+|            4 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PI();
++----------+
+| PI()     |
++----------+
+| 3.141593 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT POW(4, 2);
++-----------+
+| POW(4, 2) |
++-----------+
+|        16 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RADIANS(456);
++-------------------+
+| RADIANS(456)      |
++-------------------+
+| 7.958701389094143 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT RAND()*(23-10)+10;
++-------------------+
+| RAND()*(23-10)+10 |
++-------------------+
+| 14.03346154189991 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ROUND(987.76);
++---------------+
+| ROUND(987.76) |
++---------------+
+|           988 |
++---------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIGN(-87);
++-----------+
+| SIGN(-87) |
++-----------+
+|        -1 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SIN(98);
++---------------------+
+| SIN(98)             |
++---------------------+
+| -0.5733818719904229 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SQRT(98);
++-------------------+
+| SQRT(98)          |
++-------------------+
+| 9.899494936611665 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TAN(-78.6);
++----------------------+
+| TAN(-78.6)           |
++----------------------+
+| -0.06025642888915171 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT TRUNCATE(123.67, 8);
++---------------------+
+| TRUNCATE(123.67, 8) |
++---------------------+
+|              123.67 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LN(0.4);
++--------------------+
+| LN(0.4)            |
++--------------------+
+| -0.916290731874155 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE SALARY;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> USE SALARY;
+Database changed
+mysql> CREATE TABLE SALARY(EMPNAME INT , EMPSALARY INT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> UPDATE TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'TABLE SALARY(EMPNAME VARCHAR(20) , EMPSALARY INT)' at line 1
+mysql> USE Employee;
+Database changed
+mysql> CREATE TABLE Employee(EMPNAME VARCHAR(20) , EMPSALARY INT);
+ERROR 1050 (42S01): Table 'employee' already exists
+mysql> select * from Employee;
++---------+-----------+
+| EMPNAME | EMPSALARY |
++---------+-----------+
+| Guganya |     30000 |
+| priya   |     40000 |
++---------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT BINARY('MYSQL LANGUAGE');
++----------------------------------------------------+
+| BINARY('MYSQL LANGUAGE')                           |
++----------------------------------------------------+
+| 0x4D5953514C204C414E4755414745                     |
++----------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COALESCE(NULL , NULL, 'PRIYA' , NULL);
++---------------------------------------+
+| COALESCE(NULL , NULL, 'PRIYA' , NULL) |
++---------------------------------------+
+| PRIYA                                 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> select CONNECTION_ID();
++-----------------+
+| CONNECTION_ID() |
++-----------------+
+|              39 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE DATABASE HCLEMP;
+Query OK, 1 row affected (0.01 sec)
+
+mysql>  SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| employee   |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT USER();
++----------------+
+| USER()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IF(141>138 , 'YES' ,'NO');
++---------------------------+
+| IF(141>138 , 'YES' ,'NO') |
++---------------------------+
+| YES                       |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT IFNULL('GUGANYA' , 'KP');
++--------------------------+
+| IFNULL('GUGANYA' , 'KP') |
++--------------------------+
+| GUGANYA                  |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ISNULL(0);
++-----------+
+| ISNULL(0) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NULLIF(7,7);
++-------------+
+| NULLIF(7,7) |
++-------------+
+|        NULL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT VERSION();
++-----------+
+| VERSION() |
++-----------+
+| 8.0.26    |
++-----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT ADDDATE('2021-09-05', INTERVAL 7 YEAR);
++----------------------------------------+
+| ADDDATE('2021-09-05', INTERVAL 7 YEAR) |
++----------------------------------------+
+| 2028-09-05                             |
++----------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT ADDTIME('09:23:12', '2:12:02');
++--------------------------------+
+| ADDTIME('09:23:12', '2:12:02') |
++--------------------------------+
+| 11:35:14                       |
++--------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURDATE();
++------------+
+| CURDATE()  |
++------------+
+| 2021-09-06 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIME();
++----------------+
+| CURRENT_TIME() |
++----------------+
+| 14:49:43       |
++----------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CURRENT_TIMESTAMP()+3;
++-----------------------+
+| CURRENT_TIMESTAMP()+3 |
++-----------------------+
+|        20210906144957 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE(2021-09-05);
++------------------+
+| DATE(2021-09-05) |
++------------------+
+| NULL             |
++------------------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> SELECT DATE('2021-09-05');
++--------------------+
+| DATE('2021-09-05') |
++--------------------+
+| 2021-09-05         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DATE_FORMAT('2021-09-05' , '%M %E %Y %W');
++-------------------------------------------+
+| DATE_FORMAT('2021-09-05' , '%M %E %Y %W') |
++-------------------------------------------+
+| September E 2021 Sunday                   |
++-------------------------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT DATEDIFF('2021-09-05' , '2021-09-12');
++---------------------------------------+
+| DATEDIFF('2021-09-05' , '2021-09-12') |
++---------------------------------------+
+|                                    -7 |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAY('2021-09-05');
++-------------------+
+| DAY('2021-09-05') |
++-------------------+
+|                 5 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYNAME('2021-09-15');
++-----------------------+
+| DAYNAME('2021-09-15') |
++-----------------------+
+| Wednesday             |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFMONTH('2021-08-03');
++--------------------------+
+| DAYOFMONTH('2021-08-03') |
++--------------------------+
+|                        3 |
++--------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFWEEK('2021-09-15');
++-------------------------+
+| DAYOFWEEK('2021-09-15') |
++-------------------------+
+|                       4 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT DAYOFYEAR('2021-09-15');
++-------------------------+
+| DAYOFYEAR('2021-09-15') |
++-------------------------+
+|                     258 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LAST_DAY('2021-09-12');
++------------------------+
+| LAST_DAY('2021-09-12') |
++------------------------+
+| 2021-09-30             |
++------------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:52:19 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2021-09-06 14:52:40 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT PERIOD_ADD(211402,3);
++----------------------+
+| PERIOD_ADD(211402,3) |
++----------------------+
+|               211405 |
++----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> SELECT WEEKDAY('2021-09-05');
++-----------------------+
+| WEEKDAY('2021-09-05') |
++-----------------------+
+|                     6 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SYSDATE();
++---------------------+
+| SYSDATE()           |
++---------------------+
+| 2021-09-06 14:53:27 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT FROM_DAYS(2345683);
++--------------------+
+| FROM_DAYS(2345683) |
++--------------------+
+| 6422-04-06         |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT HOUR('12:12:08');
++------------------+
+| HOUR('12:12:08') |
++------------------+
+|               12 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT LOCALTIME();
++---------------------+
+| LOCALTIME()         |
++---------------------+
+| 2021-09-06 14:54:11 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT MAKETIME(12,23,09);
++--------------------+
+| MAKETIME(12,23,09) |
++--------------------+
+| 12:23:09           |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SEC_TO_TIME('09:12:02');
++-------------------------+
+| SEC_TO_TIME('09:12:02') |
++-------------------------+
+| 00:00:09.000000         |
++-------------------------+
+1 row in set, 1 warning (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+

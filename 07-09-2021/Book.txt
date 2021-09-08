@@ -1,0 +1,52 @@
+public class Book {
+	
+	int BookID;
+	String BookName;
+	String Author;
+	String Description;
+	String PublishDate;
+	String Category;
+	
+	@Override
+	public String toString() {
+		return "Book [BookID=" + BookID + ", BookName=" + BookName + ", Author=" + Author + ", Description="
+				+ Description + ", PublishDate=" + PublishDate + ", Category=" + Category + "]";
+	}
+	public int getBookID() {
+		return BookID;
+	}
+	public void setBookID(int bookID) {
+		BookID = bookID;
+	}
+	public String getBookName() {
+		return BookName;
+	}
+	public void setBookName(String bookName) {
+		BookName = bookName;
+	}
+	public String getAuthor() {
+		return Author;
+	}
+	public void setAuthor(String author) {
+		Author = author;
+	}
+	public String getDescription() {
+		return Description;
+	}
+	public void setDescription(String description) {
+		Description = description;
+	}
+	public String getPublishDate() {
+		return PublishDate;
+	}
+	public void setPublishDate(String publishDate) {
+		PublishDate = publishDate;
+	}
+	public String getCategory() {
+		return Category;
+	}
+	public void setCategory(String category) {
+		Category = category;
+	}
+
+}

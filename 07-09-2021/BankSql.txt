@@ -1,0 +1,23 @@
+mysql> select * from books;
++--------+-------------------+--------+------------------------+-------------+----------+
+| BookID | BookName          | Author | Description            | PublishDate | Category |
++--------+-------------------+--------+------------------------+-------------+----------+
+|     75 | The little tales  | oliver | Truely child based     | 12-03-1990  | story    |
+|    190 | The lion the king | Kings  | Comedy story for child | 14-09-1885  | comic    |
+|     41 | Advanced java     | robert | Java related query     | 11-05-1870  | Study    |
++--------+-------------------+--------+------------------------+-------------+----------+
+3 rows in set (0.01 sec)
+
+
+
+AFTER DELETE ONE ROW:
+
+
+mysql> select * from books;
++--------+-------------------+--------+------------------------+-------------+----------+
+| BookID | BookName          | Author | Description            | PublishDate | Category |
++--------+-------------------+--------+------------------------+-------------+----------+
+|     75 | The little tales  | oliver | Truely child based     | 12-03-1990  | story    |
+|    190 | The lion the king | Kings  | Comedy story for child | 14-09-1885  | comic    |
++--------+-------------------+--------+------------------------+-------------+----------+
+2 rows in set (0.00 sec)

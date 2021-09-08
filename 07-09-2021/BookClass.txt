@@ -1,0 +1,139 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookClass implements BookImplements
+{
+
+	@Override
+	public Connection getConnection() {
+		Connection con=null;
+		try {
+			Class.forName(driverclass);
+			con=DriverManager.getConnection(jdbcurl, username, password);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return con;
+		
+	}
+
+	@Override
+	public void insertBooks(Book bk) {
+		// TODO Auto-generated method stub
+		String query="insert into books values(?.?,?,?,?,?)";
+		try(Connection con=getConnection())
+				{
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1,bk.getBookID());
+			ps.setString(2,bk.getBookName());
+			ps.setString(3,bk.getAuthor());
+			ps.setString(4,bk.getDescription());
+			ps.setString(5,bk.getPublishDate());
+			ps.setString(6,bk.getCategory());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+	@Override
+	public Book selectBook(int BookID) {
+		// TODO Auto-generated method stub
+		Book bok=null;
+		String query="select * from books where BookID=?";
+		try (Connection con=getConnection()){
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1, BookID);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next())
+			{
+				bok=new Book();
+				bok.setBookID(BookID);
+				bok.setBookName(rs.getString(2));
+				bok.setAuthor(rs.getString(3));
+				bok.setDescription(rs.getString(4));
+				bok.setPublishDate(rs.getString(5));
+				bok.setCategory(rs.getString(6));
+			}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return bok;
+	}
+
+	@Override
+	public List<Book> selectAllBooks() {
+		List<Book>list=new ArrayList();
+		String query="Select * from books";
+		try (Connection con=getConnection()){
+			PreparedStatement ps=con.prepareStatement(query);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next())
+			{
+				Book book=new Book();
+				book.setBookID(rs.getInt(1));
+				book.setBookName(rs.getString(2));
+				book.setAuthor(rs.getString(3));
+				book.setDescription(rs.getString(4));
+				book.setPublishDate(rs.getString(5));
+				book.setCategory(rs.getString(6));
+				list.add(book);
+			}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return list;
+	}
+
+	@Override
+	public boolean deleteBook(int BookID) {
+		boolean result=false;
+		String query="delete from books where BookID=?";
+		try (Connection con=getConnection()){
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1, BookID);
+			result=ps.executeUpdate()>0;
+		}
+		catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return result;
+	}
+
+	@Override
+	public boolean updateBook(Book bk) {
+		boolean result=false;
+		String query="update  bookapplication set bookname=?,bookauthor=?,bookgenre=?,bookcost=? where bookid=? ";
+		try (Connection con=getConnection()){
+			PreparedStatement ps=con.prepareStatement(query);
+			ps.setInt(1,bk.getBookID());
+			ps.setString(2,bk.getBookName());
+			ps.setString(3,bk.getAuthor());
+			ps.setString(4,bk.getDescription());
+			ps.setString(5,bk.getPublishDate());
+			ps.setString(6,bk.getCategory());
+			result=ps.executeUpdate()>0;
+			
+		}
+		catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		return result;
+	}
+
+}
